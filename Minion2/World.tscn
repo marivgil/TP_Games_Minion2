@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.4588, 28.6665 )
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.9082, 32.1051 )
+
+[node name="World" type="Node" index="0"]
+
+[node name="Player" type="KinematicBody2D" parent="." index="0"]
+
+position = Vector2( 424.307, 296.714 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Player" index="1"]
+
+texture = ExtResource( 2 )
+
+[node name="Wall" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( 426.514, 479.828 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall" index="0"]
+
+modulate = Color( 0.0117188, 0.0117188, 0.0117188, 1 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" index="1"]
+
+shape = SubResource( 1 )
+
+
