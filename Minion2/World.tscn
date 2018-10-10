@@ -16,16 +16,16 @@
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=14]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_004.png" type="Texture" id=15]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_006.png" type="Texture" id=16]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=17]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=18]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=19]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=20]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=21]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_000.png" type="Texture" id=22]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_004.png" type="Texture" id=23]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_006.png" type="Texture" id=24]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_008.png" type="Texture" id=25]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_011.png" type="Texture" id=26]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_000.png" type="Texture" id=17]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_004.png" type="Texture" id=18]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_006.png" type="Texture" id=19]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_008.png" type="Texture" id=20]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_011.png" type="Texture" id=21]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=22]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=23]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=24]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=25]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=26]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_000.png" type="Texture" id=27]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_001.png" type="Texture" id=28]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_002.png" type="Texture" id=29]
@@ -63,12 +63,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Die",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
-"name": "Die",
+"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
@@ -105,8 +105,8 @@ shape = SubResource( 1 )
 
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
-animation = "Run"
-frame = 1
+animation = "Idle"
+frame = 4
 playing = true
 _sections_unfolded = [ "Transform" ]
 
