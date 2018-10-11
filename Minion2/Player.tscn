@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_000.png" type="Texture" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_002.png" type="Texture" id=34]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_003.png" type="Texture" id=35]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_004.png" type="Texture" id=36]
+[ext_resource path="res://sprites/freetileset/png/BG/BG.png" type="Texture" id=37]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -82,7 +83,7 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -104,6 +105,7 @@ position = Vector2( -27.0633, -32.4293 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "Idle"
+frame = 2
 playing = true
 centered = false
 _sections_unfolded = [ "Transform" ]
@@ -121,8 +123,8 @@ limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
-smoothing_enabled = false
-smoothing_speed = 5.0
+smoothing_enabled = true
+smoothing_speed = 3.0
 offset_v = 0.0
 offset_h = 0.0
 drag_margin_left = 0.2
@@ -132,5 +134,29 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit", "Smoothing" ]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+_sections_unfolded = [ "Scroll" ]
+
+[node name="BG" type="Sprite" parent="ParallaxBackground" index="0"]
+
+scale = Vector2( 0.64, 0.512 )
+texture = ExtResource( 37 )
+centered = false
+offset = Vector2( 0, -64 )
+_sections_unfolded = [ "Offset" ]
 
 
