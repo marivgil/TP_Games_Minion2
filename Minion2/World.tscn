@@ -38,10 +38,10 @@
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_004.png" type="Texture" id=36]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=37]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 29.4588, 28.6665 )
+radius = 30.3689
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -99,15 +99,16 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Player" index="1"]
 
+position = Vector2( -27.0633, -32.4293 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 4
 playing = true
+centered = false
 _sections_unfolded = [ "Transform" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
