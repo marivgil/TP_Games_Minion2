@@ -1,120 +1,19 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_000.png" type="Texture" id=2]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_002.png" type="Texture" id=3]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_001.png" type="Texture" id=4]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_003.png" type="Texture" id=5]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_004.png" type="Texture" id=6]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_000.png" type="Texture" id=7]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_001.png" type="Texture" id=8]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_002.png" type="Texture" id=9]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_003.png" type="Texture" id=10]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_004.png" type="Texture" id=11]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_000.png" type="Texture" id=12]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_002.png" type="Texture" id=13]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=14]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_004.png" type="Texture" id=15]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_006.png" type="Texture" id=16]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_000.png" type="Texture" id=17]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_004.png" type="Texture" id=18]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_006.png" type="Texture" id=19]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_008.png" type="Texture" id=20]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_011.png" type="Texture" id=21]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=22]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=23]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=24]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=25]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=26]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_000.png" type="Texture" id=27]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_001.png" type="Texture" id=28]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_002.png" type="Texture" id=29]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_003.png" type="Texture" id=30]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_004.png" type="Texture" id=31]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_000.png" type="Texture" id=32]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_001.png" type="Texture" id=33]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_002.png" type="Texture" id=34]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_003.png" type="Texture" id=35]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_004.png" type="Texture" id=36]
-[ext_resource path="res://TileSet.tres" type="TileSet" id=37]
-
-[sub_resource type="CircleShape2D" id=3]
-
-custom_solver_bias = 0.0
-radius = 30.3689
-
-[sub_resource type="SpriteFrames" id=2]
-
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Run",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "Die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
-"loop": true,
-"name": "Hurt",
-"speed": 5.0
-} ]
-_sections_unfolded = [ "Resource" ]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node" index="0"]
 
-[node name="Player" type="KinematicBody2D" parent="." index="0"]
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 352, 64 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
-
-shape = SubResource( 3 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Player" index="1"]
-
-position = Vector2( -27.0633, -32.4293 )
-scale = Vector2( 0.15, 0.15 )
-frames = SubResource( 2 )
-animation = "Idle"
-playing = true
-centered = false
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 155.083, 43.532 )
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
 mode = 0
-tile_set = ExtResource( 37 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -129,10 +28,16 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196609, 0, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 262156, 8, 0, 262157, 10, 0, 262158, 10, 0, 262159, 10, 0, 262160, 10, 0, 262161, 9, 0, 458757, 7, 0, 458758, 0, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 2, 0, 524293, 6, 0, 524294, 3, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 5, 0 )
+tile_data = PoolIntArray( 196609, 0, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 262156, 8, 0, 262157, 10, 0, 262158, 10, 0, 262159, 10, 0, 262160, 10, 0, 262161, 9, 0, 458754, 7, 0, 458755, 7, 0, 458756, 7, 0, 458757, 7, 0, 458758, 0, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 2, 0, 524290, 6, 0, 524291, 6, 0, 524292, 6, 0, 524293, 6, 0, 524294, 3, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 5, 0 )
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="WorldComplete" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 524.578, 95.8963 )
+_sections_unfolded = [ "Transform" ]
+next_world = "res://World2.tscn"
 
 
