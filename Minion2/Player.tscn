@@ -105,7 +105,7 @@ position = Vector2( -27.0633, -32.4293 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 2
+frame = 3
 playing = true
 centered = false
 _sections_unfolded = [ "Transform" ]
@@ -151,12 +151,18 @@ scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = false
 _sections_unfolded = [ "Scroll" ]
 
-[node name="BG" type="Sprite" parent="ParallaxBackground" index="0"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 0.1, 0.1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 450, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="BG" type="Sprite" parent="ParallaxBackground" index="1"]
 
 scale = Vector2( 0.64, 0.512 )
 texture = ExtResource( 37 )
 centered = false
-offset = Vector2( 0, -64 )
 _sections_unfolded = [ "Offset" ]
 
 
