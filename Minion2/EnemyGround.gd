@@ -25,4 +25,5 @@ func _process(delta):
 			flip = true
 			
 func hurt():
-	print("DAÑO")
+	$AnimatedSprite.play("gotHit")
+	queue_free()
