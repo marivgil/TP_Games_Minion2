@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://EnemyGround.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Green Horn Monster/idle/frame-1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Green Horn Monster/idle/frame-2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Green Horn Monster/got hit/frame-1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Green Horn Monster/got hit/frame-2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "gotHit",
+"speed": 3.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.5342, 18.2507 )
+
+[node name="EnemyGround" type="StaticBody2D" index="0"]
+
+position = Vector2( 0.527042, 1.58112 )
+scale = Vector2( 0.7, 0.7 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( -0.376456, -1.50583 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 2 )
+animation = "Idle"
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -0.96053, -5.2427 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+

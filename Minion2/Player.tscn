@@ -1,16 +1,16 @@
 [gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_000.png" type="Texture" id=2]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_002.png" type="Texture" id=3]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_001.png" type="Texture" id=4]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_003.png" type="Texture" id=5]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_004.png" type="Texture" id=6]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_000.png" type="Texture" id=7]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_001.png" type="Texture" id=8]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_002.png" type="Texture" id=9]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_003.png" type="Texture" id=10]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_004.png" type="Texture" id=11]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_000.png" type="Texture" id=2]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_001.png" type="Texture" id=3]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_002.png" type="Texture" id=4]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_003.png" type="Texture" id=5]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/3_RUN_004.png" type="Texture" id=6]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_000.png" type="Texture" id=7]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_002.png" type="Texture" id=8]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_001.png" type="Texture" id=9]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_003.png" type="Texture" id=10]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_004.png" type="Texture" id=11]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_000.png" type="Texture" id=12]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_002.png" type="Texture" id=13]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=14]
@@ -48,12 +48,12 @@ radius = 30.3689
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "Idle",
+"name": "Run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "Run",
+"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
@@ -83,7 +83,7 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -105,7 +105,6 @@ position = Vector2( -27.0633, -32.4293 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 3
 playing = true
 centered = false
 _sections_unfolded = [ "Transform" ]
