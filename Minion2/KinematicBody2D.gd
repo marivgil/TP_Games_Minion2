@@ -36,3 +36,7 @@ func _physics_process(delta):
 
 	motion = move_and_slide(motion, UP)
 	pass
+
+
+func _on_Node2D_body_entered(body):
+	body.hurt()

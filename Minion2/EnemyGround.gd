@@ -23,3 +23,6 @@ func _process(delta):
 		$AnimatedSprite.flip_h = false
 		if(position.x <= initial_position):
 			flip = true
+			
+func hurt():
+	print("DAÑO")
