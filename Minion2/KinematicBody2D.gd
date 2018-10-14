@@ -6,6 +6,7 @@ const ACCELERATION = 50
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -500
 var motion = Vector2()
+var world = "res://World.tscn"
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -40,3 +41,7 @@ func _physics_process(delta):
 
 func _on_Node2D_body_entered(body):
 	body.hurt()
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	get_tree().change_scene(world)

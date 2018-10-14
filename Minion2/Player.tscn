@@ -11,31 +11,31 @@
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_001.png" type="Texture" id=9]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_003.png" type="Texture" id=10]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_004.png" type="Texture" id=11]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_000.png" type="Texture" id=12]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_002.png" type="Texture" id=13]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=14]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_004.png" type="Texture" id=15]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_006.png" type="Texture" id=16]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_000.png" type="Texture" id=17]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_004.png" type="Texture" id=18]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_006.png" type="Texture" id=19]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_008.png" type="Texture" id=20]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_011.png" type="Texture" id=21]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=22]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=23]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=24]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=25]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=26]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_000.png" type="Texture" id=27]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_001.png" type="Texture" id=28]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_002.png" type="Texture" id=29]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_003.png" type="Texture" id=30]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_004.png" type="Texture" id=31]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_000.png" type="Texture" id=32]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_001.png" type="Texture" id=33]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_002.png" type="Texture" id=34]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_003.png" type="Texture" id=35]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_004.png" type="Texture" id=36]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_000.png" type="Texture" id=12]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_001.png" type="Texture" id=13]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_002.png" type="Texture" id=14]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_003.png" type="Texture" id=15]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_004.png" type="Texture" id=16]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_000.png" type="Texture" id=17]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_002.png" type="Texture" id=18]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=19]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_004.png" type="Texture" id=20]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_006.png" type="Texture" id=21]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_000.png" type="Texture" id=22]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_001.png" type="Texture" id=23]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_002.png" type="Texture" id=24]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_003.png" type="Texture" id=25]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_004.png" type="Texture" id=26]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_000.png" type="Texture" id=27]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_004.png" type="Texture" id=28]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_006.png" type="Texture" id=29]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_008.png" type="Texture" id=30]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_011.png" type="Texture" id=31]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=32]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=33]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=34]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=35]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=36]
 [ext_resource path="res://sprites/freetileset/png/BG/BG.png" type="Texture" id=37]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -58,27 +58,27 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
-"name": "Attack",
+"name": "Hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "Die",
+"name": "Attack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
-"name": "Walk",
+"name": "Die",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
 "loop": true,
-"name": "Hurt",
+"name": "Jump",
 "speed": 5.0
 } ]
 _sections_unfolded = [ "Resource" ]
@@ -110,6 +110,7 @@ position = Vector2( -27.0633, -32.4293 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "Idle"
+frame = 3
 playing = true
 centered = false
 _sections_unfolded = [ "Transform" ]
@@ -172,6 +173,7 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="Node2D" type="Area2D" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 0, -1.54265 )
 scale = Vector2( 1, 0.951793 )
 input_pickable = true
@@ -191,6 +193,12 @@ position = Vector2( -0.791512, 28.4313 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="5"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
 [connection signal="body_entered" from="Node2D" to="." method="_on_Node2D_body_entered"]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 
 
