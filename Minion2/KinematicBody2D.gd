@@ -2,11 +2,12 @@ extends KinematicBody2D
 
 const UP = Vector2(0,-1)
 const GRAVITY = 20
-const ACCELERATION = 50
+const ACCELERATION = 25
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -500
 var motion = Vector2()
-var world1 = "res://Main.tscn"
+var main = "res://Main.tscn"
+var world = "res://World.tscn"
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -48,7 +49,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 	if(nivel.lifes_player<=0):
 		get_tree().change_scene("res://StartMenu.tscn")
 	else:
-		get_tree().change_scene(world1)
+		get_tree().change_scene(main)
 
 func hurt():
 	var nivel = get_tree().get_nodes_in_group("main")[0]
@@ -62,5 +63,5 @@ func hurt():
 	else:
 		print("vidas mayor a cero")
 		$Sprite.play("Die")
-		get_tree().change_scene(world1)
+		#get_tree().change_scene(world)
 	pass

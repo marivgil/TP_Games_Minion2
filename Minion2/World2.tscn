@@ -33,7 +33,7 @@ position = Vector2( 74.9785, 190.854 )
 
 [node name="WorldComplete" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 606.356, 79.7271 )
-next_world = "res://World.tscn"
+position = Vector2( 617.46, 283.296 )
+next_world = "res://World2.tscn"
 
 
