@@ -11,11 +11,11 @@
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_001.png" type="Texture" id=9]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_003.png" type="Texture" id=10]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/1_IDLE_004.png" type="Texture" id=11]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=12]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=13]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=14]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=15]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=16]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_000.png" type="Texture" id=12]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_002.png" type="Texture" id=13]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=14]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_004.png" type="Texture" id=15]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_006.png" type="Texture" id=16]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_000.png" type="Texture" id=17]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_001.png" type="Texture" id=18]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/6_HURT_002.png" type="Texture" id=19]
@@ -26,11 +26,11 @@
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_002.png" type="Texture" id=24]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_003.png" type="Texture" id=25]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/2_WALK_004.png" type="Texture" id=26]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_000.png" type="Texture" id=27]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_002.png" type="Texture" id=28]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_005.png" type="Texture" id=29]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_004.png" type="Texture" id=30]
-[ext_resource path="res://sprites/wizard/PNG/wizard_ice/5_ATTACK_006.png" type="Texture" id=31]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_000.png" type="Texture" id=27]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_001.png" type="Texture" id=28]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_002.png" type="Texture" id=29]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_003.png" type="Texture" id=30]
+[ext_resource path="res://sprites/wizard/PNG/wizard_ice/4_JUMP_004.png" type="Texture" id=31]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_000.png" type="Texture" id=32]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_004.png" type="Texture" id=33]
 [ext_resource path="res://sprites/wizard/PNG/wizard_ice/7_DIE_006.png" type="Texture" id=34]
@@ -58,7 +58,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Attack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
@@ -73,7 +73,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
-"name": "Attack",
+"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
@@ -110,7 +110,7 @@ position = Vector2( -27.0633, -32.4293 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
+frame = 2
 playing = true
 centered = false
 _sections_unfolded = [ "Transform" ]
@@ -143,6 +143,7 @@ _sections_unfolded = [ "Limit", "Smoothing" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -171,66 +172,9 @@ texture = ExtResource( 37 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
-[node name="Node2D" type="Node2D" parent="ParallaxBackground" index="2"]
-
-[node name="TextEdit" type="TextEdit" parent="ParallaxBackground/Node2D" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 28.0
-margin_top = 28.0
-margin_right = 112.0
-margin_bottom = 55.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_colors/member_variable_color = Color( 0.0672913, 0.410156, 0.104792, 1 )
-text = "Vidas:"
-readonly = false
-highlight_current_line = false
-syntax_highlighting = false
-show_line_numbers = false
-highlight_all_occurrences = false
-override_selected_font_color = false
-context_menu_enabled = true
-smooth_scrolling = false
-v_scroll_speed = 80.0
-hiding_enabled = 0
-wrap_lines = false
-caret_block_mode = false
-caret_blink = false
-caret_blink_speed = 0.65
-caret_moving_by_right_click = true
-_sections_unfolded = [ "Anchor", "Caret", "Focus", "Hint", "Mouse", "Rect", "custom_colors", "custom_constants", "custom_styles" ]
-
-[node name="Label" type="Label" parent="ParallaxBackground/Node2D" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 73.0
-margin_top = 29.0
-margin_right = 107.0
-margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="Node2D" type="Area2D" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 0, -1.54265 )
 scale = Vector2( 1, 0.951793 )
 input_pickable = true

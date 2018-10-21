@@ -6,11 +6,10 @@ const ACCELERATION = 50
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -500
 var motion = Vector2()
-var world = "res://World.tscn"
+var world1 = "res://World.tscn"
 var lifes = 3
 
 func _physics_process(delta):
-	get_node("ParallaxBackground/Node2D/Label").set_text(String(get_score()))
 	motion.y += GRAVITY
 	var friction = false
 	
@@ -51,11 +50,8 @@ func _on_VisibilityNotifier2D_screen_exited():
 	if(lifes<=0):
 		get_tree().change_scene("res://StartMenu.tscn")
 	else:
-		get_tree().change_scene(world)
+		get_tree().change_scene(world1)
 
-func get_score():
-	return int(lifes)
-	
 func hurt():
 	print("daño en el player")
 	pass

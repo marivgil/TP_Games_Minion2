@@ -1,26 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=2]
-[ext_resource path="res://TileSet.tres" type="TileSet" id=3]
-[ext_resource path="res://EnemyGround.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World.gd" type="Script" id=1]
+[ext_resource path="res://spr_vidas.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=5]
+[ext_resource path="res://EnemyGround.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=7]
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
-[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+script = ExtResource( 1 )
+spr_vidas = ExtResource( 2 )
 
-position = Vector2( 96, 256 )
+[node name="Player" parent="." index="0" instance=ExtResource( 3 )]
 
-[node name="WorldComplete" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 104.502, 258.272 )
 
-position = Vector2( 3479.39, 321.425 )
+[node name="WorldComplete" parent="." index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 1760, 320 )
 _sections_unfolded = [ "Transform" ]
 next_world = "res://World2.tscn"
 
 [node name="TileMap" type="TileMap" parent="." index="2"]
 
 mode = 0
-tile_set = ExtResource( 3 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 17, 17 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -41,8 +47,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EnemyGround" parent="." index="3" instance=ExtResource( 4 )]
+[node name="EnemyGround" parent="." index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 256, 384 )
+
+[node name="GUI" parent="." index="4" groups=[
+"gui",
+] instance=ExtResource( 7 )]
 
 

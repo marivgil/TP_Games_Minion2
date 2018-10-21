@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://spr_vidas.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
+
+[node name="Main" type="Node"]
+
+script = ExtResource( 1 )
+spr_vidas = ExtResource( 2 )
+
+[node name="World" parent="." index="0" instance=ExtResource( 3 )]
+
+[node name="GUI" parent="." index="1" instance=ExtResource( 4 )]
+
+
