@@ -24,12 +24,12 @@ _sections_unfolded = [ "Resource" ]
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 34.4194, 18.0689 )
+extents = Vector2( 34.4194, 29.6423 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 17.7436, 21.5077 )
+extents = Vector2( 31.3289, 30.8416 )
 
 [node name="EnemyGround" type="StaticBody2D" index="0"]
 
@@ -44,9 +44,6 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -54,31 +51,31 @@ position = Vector2( -0.376456, -1.50583 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -0.461033, 1.2508 )
+position = Vector2( -0.461033, -23.0746 )
+scale = Vector2( 1, 0.308347 )
 shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
-position = Vector2( -24.6056, 0.922634 )
-scale = Vector2( 0.314512, 0.801605 )
+position = Vector2( -1.32707, -2.96113 )
+scale = Vector2( 1.1273, 0.572145 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision_mask = 0
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision", "Pickable" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( -10.6408, -3.87222 )
+position = Vector2( 0.91622, 4.63348 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
