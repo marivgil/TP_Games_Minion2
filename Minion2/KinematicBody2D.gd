@@ -6,8 +6,7 @@ const ACCELERATION = 50
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -500
 var motion = Vector2()
-var world1 = "res://World.tscn"
-var lifes = 3
+var world1 = "res://Main.tscn"
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -45,13 +44,23 @@ func _on_Node2D_body_entered(body):
 
 
 func _on_VisibilityNotifier2D_screen_exited():
-	lifes -= 1
-	print(lifes)
-	if(lifes<=0):
+	var nivel = get_tree().get_nodes_in_group("main")[0]
+	if(nivel.lifes_player<=0):
 		get_tree().change_scene("res://StartMenu.tscn")
 	else:
 		get_tree().change_scene(world1)
 
 func hurt():
+	var nivel = get_tree().get_nodes_in_group("main")[0]
+	print(nivel.lifes_player)
+	nivel.delete_life()
+	print(nivel.lifes_player)
 	print("daño en el player")
+	if(nivel.lifes_player<=0):
+		print("vidas menor a cero")
+		get_tree().change_scene("res://StartMenu.tscn")
+	else:
+		print("vidas mayor a cero")
+		$Sprite.play("Die")
+		get_tree().change_scene(world1)
 	pass

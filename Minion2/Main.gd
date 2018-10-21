@@ -15,11 +15,11 @@ func create_lifes():
 		newLife.global_position.x += offset_vidas * i
 		listLifes.append(newLife)
 		
-func quitar_vida():
+func delete_life():
 	lifes_player -= 1
 	listLifes[lifes_player].queue_free()
 	
-func agregar_vida():
+func add_life():
 	lifes_player += 1
 	var newLife = spr_vidas.instance()
 	get_tree().get_nodes_in_group("gui")[0].add_child(newLife)
