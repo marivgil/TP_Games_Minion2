@@ -4,6 +4,7 @@ var flip = true
 var initial_position
 var final_position
 var velocity = 0.3
+var lifes = 2
 
 
 func _ready():
@@ -25,8 +26,11 @@ func _process(delta):
 			flip = true
 			
 func hurt():
-	$AnimatedSprite.play("gotHit")
-	queue_free()
+	if(lifes==1):
+		queue_free()
+	else:
+		$AnimatedSprite.play("gotHit")
+		lifes -= 1
 
 func _on_Area2D_body_entered(body):
 	print(body)
