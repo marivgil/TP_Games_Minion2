@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://spr_vidas.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://TileSet.tres" type="TileSet" id=4]
 [ext_resource path="res://EnemyGround.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://FlyingEnemy.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node" index="0" groups=[
 "world",
@@ -63,5 +64,17 @@ position = Vector2( 1477.67, 320.692 )
 [node name="GUI" parent="." index="6" groups=[
 "gui",
 ] instance=ExtResource( 6 )]
+
+[node name="FlyingEnemy" parent="." index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 851.795, 189.287 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FlyingEnemy2" parent="." index="8" instance=ExtResource( 7 )]
+
+position = Vector2( 2758.02, 35.9257 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
 
 
