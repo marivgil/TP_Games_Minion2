@@ -16,12 +16,18 @@ func create_lifes():
 		listLifes.append(newLife)
 		
 func delete_life():
+	print("en delete_life")
 	lifes_player -= 1
-	listLifes[lifes_player].queue_free()
+	#var count = get_tree().get_nodes_in_group("gui")[0].get_child_count()
+	#print("COUNT")
+	#print(count)
+	#var child = get_tree().get_nodes_in_group("gui")[0].get_child(count)
+	#get_tree().get_nodes_in_group("gui")[0].remove_child(child)
+	listLifes.pop_back()
 	
 func add_life():
 	lifes_player += 1
 	var newLife = spr_vidas.instance()
 	get_tree().get_nodes_in_group("gui")[0].add_child(newLife)
 	newLife.global_position.x += offset_vidas * (lifes_player-1)
-	listLifes[lifes_player-1].append(newLife)
+	listLifes.push_back(newLife)

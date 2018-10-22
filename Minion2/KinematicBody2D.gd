@@ -64,4 +64,8 @@ func hurt():
 		print("vidas mayor a cero")
 		$Sprite.play("Die")
 		#get_tree().change_scene(world)
-	pass
+	
+func add_life():
+	print("estoy en tomar nueva vida")
+	var nivel = get_tree().get_nodes_in_group("main")[0]
+	nivel.add_life()

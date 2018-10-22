@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://spr_vidas.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://EnemyGround.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://FlyingEnemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Node" index="0" groups=[
 "world",
@@ -74,6 +75,18 @@ _sections_unfolded = [ "Transform" ]
 [node name="FlyingEnemy2" parent="." index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 2758.02, 35.9257 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="coin" parent="." index="9" instance=ExtResource( 8 )]
+
+position = Vector2( 2843.51, 7.67202 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="coin2" parent="." index="10" instance=ExtResource( 8 )]
+
+position = Vector2( 152.69, 369.531 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
