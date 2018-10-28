@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 30.0307, 32.292 )
 
-[node name="WorldComplete" type="Area2D"]
+[node name="WorldComplete" type="Area2D" index="0"]
 
 position = Vector2( 2.19366, -0.690407 )
 input_pickable = true
@@ -30,6 +30,7 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( -2.38419e-07, -7.80283 )
 shape = SubResource( 1 )
 
 

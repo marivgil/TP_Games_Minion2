@@ -16,10 +16,8 @@ func create_lifes():
 		listLifes.append(newLife)
 		
 func delete_life():
-	var newLife = spr_vidas.instance()
 	print("en delete_life")
 	lifes_player -= 1
-
 	var child = get_tree().get_nodes_in_group("gui")[0].get_child(0)
 	#	if child.is_in_group("coin") && !delete:
 	#		child.queue_free()

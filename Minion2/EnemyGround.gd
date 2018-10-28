@@ -5,8 +5,6 @@ var initial_position
 var final_position
 var velocity = 0.3
 var lifes = 2
-var firstCollision = true
-
 
 func _ready():
 	$AnimatedSprite.play("Idle")
@@ -27,16 +25,14 @@ func _process(delta):
 			flip = true
 			
 func hurt():
-	if(firstCollision):
-		firstCollision = false
-	else:
-		if(lifes==1):
-			queue_free()
-		elif(lifes==2):
-			$AnimatedSprite.play("gotHit")
-			velocity += 1
-			lifes -= 1
+	if(lifes==1):
+		queue_free()
+	elif(lifes==2):
+		$AnimatedSprite.play("gotHit")
+		velocity += 1
+		lifes -= 1
 
 
 func _on_Area2D_body_entered(body):
-	body.hurt()
+	if body.is_in_group("Player"):
+		body.hurt()

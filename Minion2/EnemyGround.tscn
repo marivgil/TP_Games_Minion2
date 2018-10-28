@@ -29,7 +29,7 @@ extents = Vector2( 34.4194, 29.6423 )
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 31.3289, 30.8416 )
+extents = Vector2( 30.2993, 30.8416 )
 
 [node name="EnemyGround" type="StaticBody2D"]
 
@@ -51,6 +51,7 @@ position = Vector2( -0.376456, -1.50583 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
@@ -74,7 +75,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 0.91622, 4.63348 )
+position = Vector2( 0.91622, 0.027174 )
+scale = Vector2( 1, 0.863886 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

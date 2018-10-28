@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://spr_vidas.tscn" type="PackedScene" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://BGMusic/the-misty-mountains-cold-the-hobbit.ogg" type="AudioStream" id=6]
+[ext_resource path="res://World3.tscn" type="PackedScene" id=7]
 
-[node name="Main" type="Node" index="0" groups=[
+[node name="Main" type="Node" groups=[
 "main",
 ]]
 
@@ -20,7 +21,9 @@ spr_vidas = ExtResource( 2 )
 "gui",
 ] instance=ExtResource( 4 )]
 
-[node name="Player" parent="." index="2" instance=ExtResource( 5 )]
+[node name="Player" parent="." index="2" groups=[
+"Player",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 100.992, 256.248 )
 
@@ -32,5 +35,9 @@ pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
+
+[node name="Node2D" parent="." index="4" groups=[
+"world",
+] instance=ExtResource( 7 )]
 
 

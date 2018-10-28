@@ -43,7 +43,6 @@ func _physics_process(delta):
 func _on_Node2D_body_entered(body):
 	body.hurt()
 
-
 func _on_VisibilityNotifier2D_screen_exited():
 	var nivel = get_tree().get_nodes_in_group("main")[0]
 	if(nivel.lifes_player<=0):
@@ -53,19 +52,16 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func hurt():
 	var nivel = get_tree().get_nodes_in_group("main")[0]
-	print(nivel.lifes_player)
 	nivel.delete_life()
 	print(nivel.lifes_player)
-	print("daño en el player")
 	if(nivel.lifes_player<=0):
-		print("vidas menor a cero")
-		get_tree().change_scene("res://StartMenu.tscn")
+		print("3 daños")
+		#get_tree().change_scene("res://GameOver.tscn")
 	else:
-		print("vidas mayor a cero")
+		print("1 daño")
 		$Sprite.play("Die")
 		#get_tree().change_scene(world)
 	
 func add_life():
-	print("estoy en tomar nueva vida")
 	var nivel = get_tree().get_nodes_in_group("main")[0]
 	nivel.add_life()
