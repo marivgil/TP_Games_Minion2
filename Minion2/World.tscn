@@ -97,7 +97,7 @@ scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="12" groups=[
-"player",
+"Player",
 ] instance=ExtResource( 9 )]
 
 position = Vector2( 81.63, 229.313 )

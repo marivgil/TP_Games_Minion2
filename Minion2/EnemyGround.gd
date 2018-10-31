@@ -34,5 +34,7 @@ func hurt():
 
 
 func _on_Area2D_body_entered(body):
+	print('daño al player')
 	if body.is_in_group("Player"):
+		print('dentro del if')
 		body.hurt()
