@@ -2,7 +2,7 @@
 
 [ext_resource path="res://GameOver.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -27,10 +27,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 162.0
-margin_top = 128.0
-margin_right = 235.0
-margin_bottom = 168.0
+margin_left = 186.0
+margin_top = 68.0
+margin_right = 378.0
+margin_bottom = 187.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -39,15 +39,33 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="Label" type="Label" parent="CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 13.0
+margin_left = 59.0
+margin_top = 52.0
+margin_right = 132.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 73.0
-margin_bottom = 27.0
+margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -59,16 +77,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="CenterContainer" index="1"]
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/Label" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 50.0
-margin_top = 69.0
-margin_right = 98.0
-margin_bottom = 89.0
+margin_left = 14.0
+margin_top = 35.0
+margin_right = 62.0
+margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -84,6 +102,6 @@ text = "Menu"
 flat = false
 align = 1
 
-[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Label/Button" to="." method="_on_Button_pressed"]
 
 
