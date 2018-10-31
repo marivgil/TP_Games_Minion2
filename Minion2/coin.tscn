@@ -24,7 +24,7 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 20.2963
+radius = 26.4894
 
 [node name="coin" type="StaticBody2D" index="0" groups=[
 "coin",
@@ -47,7 +47,7 @@ __meta__ = {
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "coin"
-frame = 5
+frame = 7
 playing = true
 _sections_unfolded = [ "Transform" ]
 

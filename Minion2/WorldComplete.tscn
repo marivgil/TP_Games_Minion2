@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 30.0307, 32.292 )
 
-[node name="WorldComplete" type="Area2D" index="0"]
+[node name="WorldComplete" type="Area2D"]
 
 position = Vector2( 2.19366, -0.690407 )
 input_pickable = true

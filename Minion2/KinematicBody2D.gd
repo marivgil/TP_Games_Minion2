@@ -6,8 +6,9 @@ const ACCELERATION = 25
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -500
 var motion = Vector2()
-var main = "res://Main.tscn"
-var world = "res://World.tscn"
+const WORLD1 = "res://World.tscn"
+const GAMEOVER = "res://GameOver.tscn"
+const GUI = "res://StartMenu.tscn"
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -41,27 +42,32 @@ func _physics_process(delta):
 
 
 func _on_Node2D_body_entered(body):
+	print('Daño al enemigo')
 	body.hurt()
 
 func _on_VisibilityNotifier2D_screen_exited():
-	var nivel = get_tree().get_nodes_in_group("main")[0]
-	if(nivel.lifes_player<=0):
-		get_tree().change_scene("res://StartMenu.tscn")
-	else:
-		get_tree().change_scene(main)
+	if get_global_position().y > 512:
+		get_tree().change_scene(GUI)
+#	var nivel = get_tree().get_nodes_in_group("world")[0]
+#	if(nivel.lifes_player<=0):
+#		get_tree().change_scene(world1)
+#	else:
+#	get_tree().change_scene(GUI)
+#	pass
 
 func hurt():
-	var nivel = get_tree().get_nodes_in_group("main")[0]
+	print('me daña el enemigo')
+	var nivel = get_tree().get_nodes_in_group("world")[0]
 	nivel.delete_life()
 	print(nivel.lifes_player)
 	if(nivel.lifes_player<=0):
 		print("3 daños")
-		#get_tree().change_scene("res://GameOver.tscn")
+		get_tree().change_scene("res://GameOver.tscn")
 	else:
 		print("1 daño")
 		$Sprite.play("Die")
 		#get_tree().change_scene(world)
 	
 func add_life():
-	var nivel = get_tree().get_nodes_in_group("main")[0]
+	var nivel = get_tree().get_nodes_in_group("world")[0]
 	nivel.add_life()

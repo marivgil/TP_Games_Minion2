@@ -4,7 +4,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
 
-[node name="Nivel2" type="Node" index="0"]
+[node name="Nivel2" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -34,5 +34,6 @@ position = Vector2( 74.9785, 190.854 )
 [node name="WorldComplete" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 617.46, 283.296 )
+next_world = "res://World3.tscn"
 
 
